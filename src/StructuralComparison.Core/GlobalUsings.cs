@@ -1,0 +1,9 @@
+global using System.Collections.Frozen;
+global using System.Collections.ObjectModel;
+global using System.Diagnostics.CodeAnalysis;
+global using System.Reflection;
+global using StructuralComparison.Core.Enums;
+global using StructuralComparison.Core.Exceptions;
+global using StructuralComparison.Core.Extensions;
+global using StructuralComparison.Core.Models;
+global using StructuralComparison.Core.Results;
