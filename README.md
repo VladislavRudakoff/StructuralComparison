@@ -6,7 +6,7 @@ It compares the properties of the two types based on names and data types, or ex
 by analyzing parameter names, parameter types, and output types.
 
 The primary aim of this project is to facilitate automatic checks to verify that the contracts specified in,
-for instance, the *.Contracts project are congruent with the controllers in the current project.
+for instance, the ***.Contracts** project are congruent with the **controllers** in the current project.
 By doing so, it ensures that there are no discrepancies between the contracts and the implementation in the controllers,
 thereby guaranteeing that the contracts remain relevant and up-to-date.
 
@@ -14,6 +14,39 @@ thereby guaranteeing that the contracts remain relevant and up-to-date.
 The Type Comparison Tool utilizes a sophisticated algorithm to analyze the structure of two types and systematically
 compare their properties and methods. It provides detailed reports highlighting any differences detected in the properties,
 methods, and parameters of the types being compared.
+
+## Getting Started
+
+To start using, install the Nuget package **StructuralComparison** (**_it does not exist yet_**)
+
+There are several methods that allow you to compare different types of data:
+
+- **Enums**
+```cs
+public static bool Compare(Type firstType, Type secondType)
+{
+    AssertResult result = StructuralComparisonService.CompareEnums(firstType, secondType);
+
+    return result.IsSuccessful;
+}
+```
+
+> If both types are not enums, then the result of the comparison will immediately contain a description of the error, and the **isSuccessful** property will be set to **_false_**
+
+- **CustomTypes**
+```cs
+
+```
+
+- **Methods**
+```cs
+
+```
+
+- **Contracts**
+```cs
+
+```
 
 ## Contributing
 Contributions to this project are welcome.

@@ -6,7 +6,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StructuralComparison.Core",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3EC3A928-38C2-4404-BC2F-6052FCA7EE5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuralComparison.UnitTests", "tests\StructuralComparison.UnitTests\StructuralComparison.UnitTests.csproj", "{A2726DF0-8592-4225-8AF3-5188FFFD0B53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StructuralComparison.UnitTests", "tests\StructuralComparison.UnitTests\StructuralComparison.UnitTests.csproj", "{A2726DF0-8592-4225-8AF3-5188FFFD0B53}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6D39DD40-B1DC-4816-B82F-CEB5D697F6E2}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuralComparison.AspNetCore", "src\StructuralComparison.AspNetCore\StructuralComparison.AspNetCore.csproj", "{5843E1AD-097F-4C16-9126-4C9DE78F8ABF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StructuralComparison.AspNetCore", "src\StructuralComparison.AspNetCore\StructuralComparison.AspNetCore.csproj", "{5843E1AD-097F-4C16-9126-4C9DE78F8ABF}"
 EndProject
 Global
 	GlobalSection(ExtensibilityGlobals) = postSolution

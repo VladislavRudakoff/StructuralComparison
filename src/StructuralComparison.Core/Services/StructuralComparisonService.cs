@@ -42,7 +42,7 @@ public static class StructuralComparisonService
     /// </summary>
     /// <param name="firstContractType"></param>
     /// <param name="secondContractType"></param>
-    /// <returns></returns>
+    /// <returns>Агрегированный результат проверки</returns>
     public static AssertResult CompareContracts(Type firstContractType, Type secondContractType)
     {
         AssertResult result = new();
@@ -233,7 +233,4 @@ public static class StructuralComparisonService
 
         return result;
     }
-
-    private static bool FilterCurrentInstanceMethods(MethodInfo methodInfo, Type type) =>
-        methodInfo.DeclaringType == type && !methodInfo.CheckGeneratedAttributes();
 }
