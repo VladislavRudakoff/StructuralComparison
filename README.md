@@ -35,17 +35,32 @@ public static bool Compare(Type firstType, Type secondType)
 
 - **CustomTypes**
 ```cs
+public static bool Compare(Type firstCustomType, Type secondCustomType)
+{
+    AssertResult result = StructuralComparisonService.CompareCustomTypes(firstCustomType, secondCustomType);
 
+    return result.IsSuccessful;
+}
 ```
 
 - **Methods**
 ```cs
+public static bool Compare(MethodInfo firstMethodInfo, MethodInfo secondMethodInfo)
+{
+    AssertResult result = StructuralComparisonService.CompareMethods(firstMethodInfo, secondMethodInfo);
 
+    return result.IsSuccessful;
+}
 ```
 
 - **Contracts**
 ```cs
+public static bool Compare(Type firstContractType, Type secondContractType)
+{
+    AssertResult result = StructuralComparisonService.CompareContracts(firstContractType, secondContractType);
 
+    return result.IsSuccessful;
+}
 ```
 
 ## Contributing
