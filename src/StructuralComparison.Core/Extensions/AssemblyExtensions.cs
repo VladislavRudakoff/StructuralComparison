@@ -49,10 +49,10 @@ public static class AssemblyExtensions
     /// <returns>Все типы, имена которых заканчиваются на заданный постфикс</returns>
     public static IEnumerable<Type> GetAllTypesByPostfix(this Assembly assembly, string postfix)
     {
-        Func<Type, bool> func = type => type.FullName?.EndsWith(postfix, StringComparison.InvariantCultureIgnoreCase)
-                                        ?? type.Name.EndsWith(postfix, StringComparison.InvariantCultureIgnoreCase);
+        return assembly.GetTypes().Where(Func);
 
-        return assembly.GetTypes().Where(func);
+        bool Func(Type type) => type.FullName?.EndsWith(postfix, StringComparison.InvariantCultureIgnoreCase)
+                                ?? type.Name.EndsWith(postfix, StringComparison.InvariantCultureIgnoreCase);
     }
 
     /// <summary>
@@ -63,10 +63,10 @@ public static class AssemblyExtensions
     /// <returns>Все типы, имена которых содержат заданный текст</returns>
     public static IEnumerable<Type> GetAllTypesByString(this Assembly assembly, string text)
     {
-        Func<Type, bool> func = type => type.FullName?.Contains(text, StringComparison.InvariantCultureIgnoreCase)
-                                        ?? type.Name.Contains(text, StringComparison.InvariantCultureIgnoreCase);
+        return assembly.GetTypes().Where(Func);
 
-        return assembly.GetTypes().Where(func);
+        bool Func(Type type) => type.FullName?.Contains(text, StringComparison.InvariantCultureIgnoreCase)
+                                ?? type.Name.Contains(text, StringComparison.InvariantCultureIgnoreCase);
     }
 
     /// <summary>

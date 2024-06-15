@@ -3,15 +3,15 @@ namespace StructuralComparison.Core.Models;
 /// <summary>
 /// Параметр метода
 /// </summary>
-public readonly struct MethodParameter(Type type, string name)
+public readonly record struct MethodParameter(Type Type, string Name)
 {
     /// <summary>
     /// Тип параметра
     /// </summary>
-    public Type Type { get; } = type;
+    public Type Type { get; } = Type;
 
     /// <summary>
     /// Имя параметра
     /// </summary>
-    public string Name { get; } = name;
+    public string Name { get; } = Name;
 }

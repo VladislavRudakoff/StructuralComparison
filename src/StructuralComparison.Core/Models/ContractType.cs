@@ -3,20 +3,20 @@ namespace StructuralComparison.Core.Models;
 /// <summary>
 /// Представляет собой тип класса-контракта(контроллера или клиента)
 /// </summary>
-public readonly struct ContractType(string name, string shortName, MethodMetadata[] methods)
+public readonly record struct ContractType(string Name, string ShortName, MethodMetadata[] Methods)
 {
     /// <summary>
     /// Название класса-контракта
     /// </summary>
-    public string Name { get; } = name;
+    public string Name { get; } = Name;
 
     /// <summary>
     /// Сокращённое название класса-контракта
     /// </summary>
-    public string ShortName { get; } = shortName;
+    public string ShortName { get; } = ShortName;
 
     /// <summary>
     /// Методы класса-контракта
     /// </summary>
-    public MethodMetadata[] Methods { get; } = methods;
+    public MethodMetadata[] Methods { get; } = Methods;
 }

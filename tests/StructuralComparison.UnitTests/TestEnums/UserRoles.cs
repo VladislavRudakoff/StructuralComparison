@@ -11,7 +11,7 @@ public enum UserRoles
     Edit = 1 << 1,
     Delete = 1 << 2,
     Share = 1 << 3,
-    Admin = (View | Edit | Delete | Share)
+    Admin = View | Edit | Delete | Share
 }
 
 /// <summary>
@@ -25,7 +25,7 @@ public enum SameUserRoles
     Edit = 1 << 1,
     Delete = 1 << 2,
     Share = 1 << 3,
-    Admin = (View | Edit | Delete | Share)
+    Admin = View | Edit | Delete | Share
 }
 
 /// <summary>
@@ -39,5 +39,5 @@ public enum WrongUserRoles
     View = 1 << 1,
     Share = 1 << 2,
     Delete = 1 << 3,
-    Admin = (View | Edit | Delete | Share)
+    Admin = View | Edit | Delete | Share
 }

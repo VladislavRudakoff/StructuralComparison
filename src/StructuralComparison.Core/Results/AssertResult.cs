@@ -3,11 +3,9 @@ namespace StructuralComparison.Core.Results;
 /// <summary>
 /// Представляет собой агрегированный результат теста
 /// </summary>
-public readonly struct AssertResult()
+public readonly record struct AssertResult()
 {
     public bool IsSuccessful => Errors.Count == 0;
-
-    private Collection<string> Errors { get; } = new();
 
     public AssertResult AddError(string errorMessage)
     {
@@ -16,15 +14,13 @@ public readonly struct AssertResult()
         return this;
     }
 
-    public Collection<string> GetErrors() => Errors;
+    public Collection<string> Errors { get; } = [];
 
     public AssertResult Combine(AssertResult assertResult)
     {
-        IReadOnlyCollection<string> errors = assertResult.GetErrors();
-
-        if (errors.Count > 0)
+        if (assertResult.Errors.Count > 0)
         {
-            foreach (string error in errors)
+            foreach (string error in assertResult.Errors)
             {
                 Errors.Add(error);
             }
