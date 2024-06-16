@@ -2,7 +2,10 @@ namespace StructuralComparison.UnitTests.TestMethods;
 
 public sealed class TestService
 {
-    public void Push(decimal salary, bool isActive) { }
+    public void Push(decimal salary, bool isActive)
+    {
+        // Method intentionally left empty.
+    }
 
     public async Task<IEnumerable<string>> Handle(Guid id, CancellationToken cancellationToken = default) =>
         await Task.FromResult(Enumerable.Empty<string>());
@@ -16,7 +19,10 @@ public sealed class SameTestService
 {
     public Task SetName(Guid modelId, string newName) => Task.CompletedTask;
 
-    public void Push(decimal salary, bool isActive) { }
+    public void Push(decimal salary, bool isActive)
+    {
+        // Method intentionally left empty.
+    }
 
     public Task<IEnumerable<string>> Handle(Guid id, CancellationToken cancellationToken = default) =>
         Task.FromResult(Enumerable.Empty<string>());

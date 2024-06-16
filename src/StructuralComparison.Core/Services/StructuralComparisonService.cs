@@ -87,8 +87,8 @@ public static class StructuralComparisonService
             result.Combine(CompareTypes(firstReturnType, secondReturnType));
         }
 
-        MethodParameter[] firstParameters = firstMethodMetadata.Parameters;
-        MethodParameter[] secondParameters = secondMethodMetadata.Parameters;
+        MethodParameter[] firstParameters = firstMethodMetadata.Parameters.ToArray();
+        MethodParameter[] secondParameters = secondMethodMetadata.Parameters.ToArray();
 
         if (firstParameters.Length != secondParameters.Length)
         {
